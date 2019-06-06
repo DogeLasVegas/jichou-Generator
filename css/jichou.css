@@ -1,5 +1,5 @@
 body{
-				cursor: url("https://github.com/greedymonkey/greedymonkey/tree/gh-pages/img/huaji.cur",auto);
+				cursor: url(/img/huaji.cur),auto;
 			}
 			.jichou{
 				margin: 50px auto;
