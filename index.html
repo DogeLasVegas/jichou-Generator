@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/icons-extra.css" />
+    
+    <style type="text/css">
+    	/**{
+    		touch-action: none;
+    	}*/
+    	.title{
+			margin: 20px 15px 10px;
+			color: #6d6d72;
+			font-size: 15px;
+		}
+		
+		.oa-contact-cell.mui-table .mui-table-cell {
+			padding: 11px 0;
+			vertical-align: middle;
+		}
+		
+		.oa-contact-cell {
+			position: relative;
+			margin: -11px 0;
+		}
+
+		.oa-contact-avatar {
+			width: 75px;
+		}
+		.oa-contact-avatar img {
+			border-radius: 50%;
+		}
+		.oa-contact-content {
+			width: 100%;
+		}
+		.oa-contact-name {
+			margin-right: 20px;
+		}
+		.oa-contact-name, oa-contact-position {
+			float: left;
+		}
+		
+		/*列表样式*/
+		.mui-row.mui-fullscreen>[class*="mui-col-"] {
+			height: 100%;
+		}
+		
+		.mui-col-xs-3,
+		.mui-col-xs-9 {
+			overflow-y: auto;
+			height: 100%;
+		}
+		
+		.mui-segmented-control .mui-control-item {
+			line-height: 50px;
+			width: 100%;
+		}
+		
+		.mui-control-content {
+			display: block;
+		}
+		
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+			background-color: #fff;
+		}
+		
+		
+		/*单个列表项样式*/
+		.mui-table-view li{
+			height: 110px;
+		}
+		.mui-table-view .mui-pull-left{
+			line-height: 80px;
+			height: 80px;
+			max-width: 80px;
+			
+		}
+		.mui-table-view .mui-ellipsis{
+			color: black;
+			white-space: normal;
+			font-size: 14px;
+			line-height: 18px;
+			/*font-weight: 550;*/
+			overflow: hidden;
+	        text-overflow: ellipsis;
+	        display: -webkit-box;
+	        -webkit-line-clamp:2;
+	        -webkit-box-orient: vertical;
+
+		}
+		.mui-table-view .mui-media-body{
+			position: relative;
+			height: 90px;
+		}
+		.mui-table-view .price{
+			position: absolute;
+			top: 55px;
+			margin-top: 15px;
+			font-size: 20px;
+			color: #FF4500;
+		}
+		
+		
+		
+    </style>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">首页</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active" href="#" id="index">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html" id="cart">
+			<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><!--<span class="mui-badge">9</span>--></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="person.html" id="p_center">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">个人中心</span>
+		</a>
+	</nav>
+	<div class="mui-content mui-row mui-fullscreen">
+		<div class="mui-col-xs-3">
+			<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+			</div>
+		</div>
+		<div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+			<div id="content1" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>卫龙 旗舰店亲嘴豆皮辣条65g*5麻辣零食豆腐皮豆干变态辣片休闲零食小吃办公室零食 川香麻辣味</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>卫龙 旗舰店亲嘴豆皮辣条65g*5麻辣零食豆腐皮豆干变态辣片休闲零食小吃办公室零食 川香麻辣味</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>卫龙 旗舰店亲嘴豆皮辣条65g*5麻辣零食豆腐皮豆干变态辣片休闲零食小吃办公室零食 川香麻辣味</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+		
+				</ul>
+			</div>
+			<div id="content1" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>卫龙 旗舰店亲嘴豆皮辣条65g*5麻辣零食豆腐皮豆干变态辣片休闲零食小吃办公室零食 川香麻辣味</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>卫龙 旗舰店亲嘴豆皮辣条65g*5麻辣零食豆腐皮豆干变态辣片休闲零食小吃办公室零食 川香麻辣味</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>卫龙 旗舰店亲嘴豆皮辣条65g*5麻辣零食豆腐皮豆干变态辣片休闲零食小吃办公室零食 川香麻辣味</p>
+								<p class="price">￥25</p>
+							</div>
+						</a>
+					</li>
+		
+				</ul>
+			</div>
+			
+			
+		</div>
+	</div>
+</body>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  	mui.init({
+//		subpages:[{
+//			url:'list.html',
+//    		id:'list.html',
+//		}],
+  	});
+  	
+  	
+  	var controls = document.getElementById("segmentedControls");
+	var contents = document.getElementById("segmentedControlContents");
+		
+	//获取一级分类
+//		function getyiji(){
+//			var js = {};
+//			js["nclass"] = 1;
+//			js = JSON.stringify(js);
+//			mui.ajax({
+//				type:"post",
+//				url:"http://shop.puyizu.com/class/list",
+//				dataType:"json",
+//				data:js,
+//				async:false,
+//				success: function(result) {
+//					if(result.result == "OK"){
+//						var sj='';
+//						for(var i=0;i <= result.data.length;i++){
+////							sj += "<div class='list' data-id='"+result.data[i].id+"'>"+result.data[i].name+"</div>";
+//							sj += '<a class="mui-control-item" data-index="' + result.data[i].id + '" href="#content' + result.data[i].id + '">' + result.data[i].name + '</a>';
+//						}
+//						controls.innerHTML = sj;
+//						
+////						$.each(result.data, function(i,n) {
+////							var sj = "<div class='list' data-id='"+n.id+"'>"+n.name+"</div>";
+////							$(".index_left_list").append(sj);
+////								
+////						});
+//					}
+//				}
+//			});
+//		}
+		
+		
+//		var html = [];
+		var html ="";
+		var i = 1,
+			j = 1,
+			m = 10, //左侧选项卡数量+1
+			n = 15; //每个选项卡列表数量+1
+		for (; i < m; i++) {
+			html += '<a class="mui-control-item" data-index="' + (i - 1) + '" href="#content' + i + '">选项' + i + '</a>';
+//			html.push('<a class="mui-control-item" data-index="' + (i - 1) + '" href="#content' + i + '">选项' + i + '</a>');
+		}
+//		controls.innerHTML = html.join('');
+		controls.innerHTML = html;
+//		html = "";
+//		for (i = 1; i < m; i++) {
+//			html += '<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">';
+//			for (j = 1; j < n; j++) {
+//				html += '<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>';
+//			}
+//			html += '</ul></div>';
+//		}
+//		contents.innerHTML = html;
+	//	默认选中第一个
+		controls.querySelector('.mui-control-item').classList.add('mui-active');
+//		contents.querySelector('.mui-control-content').classList.add('mui-active');
+		(function() {
+			var controlsElem = document.getElementById("segmentedControls");
+			var contentsElem = document.getElementById("segmentedControlContents");
+			var controlListElem = controlsElem.querySelectorAll('.mui-control-item');
+			var contentListElem = contentsElem.querySelectorAll('.mui-control-content');
+			var controlWrapperElem = controlsElem.parentNode;
+			var controlWrapperHeight = controlWrapperElem.offsetHeight;
+			var controlMaxScroll = controlWrapperElem.scrollHeight - controlWrapperHeight;//左侧类别最大可滚动高度
+			var maxScroll = contentsElem.scrollHeight - contentsElem.offsetHeight;//右侧内容最大可滚动高度
+			var controlHeight = controlListElem[0].offsetHeight;//左侧类别每一项的高度
+			var controlTops = []; //存储control的scrollTop值
+			var contentTops = [0]; //存储content的scrollTop值
+			var length = contentListElem.length;
+			for (var i = 0; i < length; i++) {
+				controlTops.push(controlListElem[i].offsetTop + controlHeight);
+			}
+			for (var i = 1; i < length; i++) {
+				var offsetTop = contentListElem[i].offsetTop;
+				if (offsetTop + 100 >= maxScroll) {
+					var height = Math.max(offsetTop + 100 - maxScroll, 100);
+					var totalHeight = 0;
+					var heights = [];
+					for (var j = i; j < length; j++) {
+						var offsetHeight = contentListElem[j].offsetHeight;
+						totalHeight += offsetHeight;
+						heights.push(totalHeight);
+					}
+					for (var m = 0, len = heights.length; m < len; m++) {
+						contentTops.push(parseInt(maxScroll - (height - heights[m] / totalHeight * height)));
+					}
+					break;
+				} else {
+					contentTops.push(parseInt(offsetTop));
+				}
+			}
+			contentsElem.addEventListener('scroll', function() {
+				var scrollTop = contentsElem.scrollTop;
+				for (var i = 0; i < length; i++) {
+					var offsetTop = contentTops[i];
+					var offset = Math.abs(offsetTop - scrollTop);
+//					console.log("i:"+i+",scrollTop:"+scrollTop+",offsetTop:"+offsetTop+",offset:"+offset);
+					if (scrollTop < offsetTop) {
+						if (scrollTop >= maxScroll) {
+							onScroll(length - 1);
+						} else {
+							onScroll(i - 1);
+						}
+						break;
+					} else if (offset < 20) {
+						onScroll(i);
+						break;
+					}else if(scrollTop >= maxScroll){
+						onScroll(length - 1);
+						break;
+					}
+				}
+			});
+			var lastIndex = 0;
+			//监听content滚动
+			var onScroll = function(index) {
+				if (lastIndex !== index) {
+					lastIndex = index;
+					var lastActiveElem = controlsElem.querySelector('.mui-active');
+					lastActiveElem && (lastActiveElem.classList.remove('mui-active'));
+					var currentElem = controlsElem.querySelector('.mui-control-item:nth-child(' + (index + 1) + ')');
+					currentElem.classList.add('mui-active');
+					//简单处理左侧分类滚动，要么滚动到底，要么滚动到顶
+					var controlScrollTop = controlWrapperElem.scrollTop;
+					if (controlScrollTop + controlWrapperHeight < controlTops[index]) {
+						controlWrapperElem.scrollTop = controlMaxScroll;
+					} else if (controlScrollTop > controlTops[index] - controlHeight) {
+						controlWrapperElem.scrollTop = 0;
+					}
+				}
+			};
+			//滚动到指定content
+			var scrollTo = function(index) {
+				contentsElem.scrollTop = contentTops[index];
+			};
+			mui(controlsElem).on('tap', '.mui-control-item', function(e) {
+				scrollTo(this.getAttribute('data-index'));
+				return false;
+			});
+		})();
+		
+		
+//		上拉刷新
+//		(function($) {
+//			//阻尼系数
+//			var deceleration = mui.os.ios?0.003:0.0009;
+//			$('.mui-scroll-wrapper').scroll({
+//				bounce: false,
+//				indicators: true, //是否显示滚动条
+//				deceleration:deceleration
+//			});
+//			$.ready(function() {
+//				//循环初始化所有下拉刷新，上拉加载。
+//				$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+//					$(pullRefreshEl).pullToRefresh({
+//							
+//						up: {
+//							callback: function() {
+//								var self = this;
+//								setTimeout(function() {
+//									var ul = self.element.querySelector('.mui-table-view');
+//									ul.appendChild(createFragment(ul, index, 5));
+//									self.endPullUpToRefresh();
+//								}, 1000);
+//							}
+//						}
+//					});
+//				});
+//				var createFragment = function(ul, index, count, reverse) {
+//					var length = ul.querySelectorAll('li').length;
+//					var fragment = document.createDocumentFragment();
+//					var li;
+//					for (var i = 0; i < count; i++) {
+//						li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+//						fragment.appendChild(li);
+//					}
+//					return fragment;
+//				};
+//			});
+//		})(mui);
+		
+		
+  	mui('body').on('tap','a',function(){document.location.href=this.href;});
+	  	
+</script>
+</html>
