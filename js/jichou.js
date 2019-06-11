@@ -46,7 +46,7 @@
 			html2canvas(jichou,{
 				canvas:jichou_canvas,
 				width:jichou.offsetWidth,
-				height:jichou.offsetHeight
+			//	height:jichou.offsetHeight
 			}).then(function(canvas) {
 	//		    document.body.appendChild(canvas);
 				gaoqing.setAttribute("src",canvas.toDataURL("image/jpg"));
