@@ -1,9 +1,12 @@
 body{
-				cursor: url(/img/huaji.cur),auto;
+				cursor: url(../img/huaji.cur),auto;
+			}
+			button:hover{
+				cursor: url(../img/emmm.cur),auto;
 			}
 			.jichou{
 				margin: 50px auto;
-				max-width: 350px;
+				max-width: 800px;
 			}
 			.head{
 				width: 300px;
@@ -11,33 +14,51 @@ body{
 				text-align: center;
 			}
 			.content{
-				margin: 30px auto;
+				margin: 20px auto;
+				max-width: 350px;
 			}
 			.panda{
 				text-align: center;
 			}
-			.content .editor,.title{
-				margin: 10px auto;
+			.content .editor{
+				margin: 5px 10px;
 				font-size: 18px;
+				text-align: center;
 			}
 			.content .title{
+				margin: 0 auto;
+				font-size: 18px;
+				text-align: center;
+			}
+			.controls{
 				text-align: center;
 			}
 			.controls button{
 				display: block;
-				margin: 20px auto;
+				margin: 10px auto;
+			}
+			.controls button a{
+				text-decoration: none;
+				color:white;
 			}
 			.result{
 				display: none;
 				font-size: 16px;
 				text-align: center;
+				width: 100%;
 				/*display: flex;*/
+				/*flex-direction: column;*/
 				justify-content: space-around;
+				align-items: center;
+				flex-wrap: wrap;
 			}
 			.result div{
-				margin: 0 50px;
+				max-width: 350px;
+				/*margin: 0 50px;*/
 			}
-			
+			.result div img{
+				width: 350px;
+			}
 			.result button a{
 				text-decoration: none;
 				color:white;
