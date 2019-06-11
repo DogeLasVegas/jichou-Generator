@@ -2,62 +2,17 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>记仇日记生成器</title>
+		<title>首页</title>
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
 		<!--<link rel="stylesheet" href="../css/bootstrap.min.css" />-->
-		<link rel="stylesheet" href="css/jichou.css" />
 	</head>
 	<body>
-		<div class="jichou">
-			<div class="head">
-				<h3>记仇日记生成器</h3>
-				<div id="xuanze">
-					<input type="radio" name="xuanze" id="" value="1" checked/>记仇
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="xuanze" id="" value="2" />继续记仇
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="xuanze" id="" value="3" />接着记仇
-				</div>
-			</div>
-			<div class="content" id="jichou_riji">
-				<div class="panda">
-					<img src="img/jichou_gaohu.jpg" id="xzimg">
-				</div> 
-				<div class="title">
-					<span contenteditable="true" id="date"></span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span contenteditable="true" id="weather">天气阴</span>
-				</div>
-				<div contenteditable="true" class="editor" id="jichou"></div>
-			</div> 
-			<div class="controls">
-				<button type="button" class="btn btn-primary" onclick="create()">
-					<span>生成</span>
-				</button>
-			</div> 
-			<div class="result" id="jichou_result">
-				<div id="gaoqing_div">
-					<div >高清版</div>
-					<img id="gaoqing"src/>
-					<button type="button" class="btn btn-primary" onclick="save(1)">
-						<span><a download="jichou" id="save_gaoqing">保存高清版</a></span>
-					</button>
-				</div>
-				<div id="gaohu_div">
-					<div >高糊版</div>
-					<img id="gaohu" src/>
-					<button type="button" class="btn btn-primary" onclick="save(2)">
-						<span><a download="jichou" id="save_gaohu">保存高糊版</a></span>
-					</button>
-				</div>
-			</div>
-		</div>
+		<h1>这是首页</h1>
 		
 		<canvas id="jichou_canvas" width="500px" height="600px" style="display: none;">你的浏览器并不支持画布rua</canvas>
 		
 	</body>
 	
-	<script src="js/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jichou.js" type="text/javascript" charset="utf-8"></script>
 
 	
 </html>
