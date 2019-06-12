@@ -44,14 +44,22 @@
 			var jichou = document.getElementById("jichou_riji");
 //			console.log(jichou.offsetLeft);
 			html2canvas(jichou,{
-				canvas:jichou_canvas,
 				width:jichou.offsetWidth,
-			//	height:jichou.offsetHeight
+				height:jichou.offsetHeight
 			}).then(function(canvas) {
 	//		    document.body.appendChild(canvas);
 				gaoqing.setAttribute("src",canvas.toDataURL("image/jpg"));
-				gaohu.setAttribute("src",canvas.toDataURL("image/jpeg",0.2));
 //				console.log(canvas.toDataURL());
+			});
+			html2canvas(jichou,{
+//				canvas:jichou_canvas,
+				background: "#fff",
+				imageTimeout:0,
+				width:jichou.offsetWidth,
+				height:jichou.offsetHeight
+			}).then(function(canvas) {
+	//		    document.body.appendChild(canvas);
+				gaohu.setAttribute("src",canvas.toDataURL("image/jpeg",0.2));
 			});
 
 		}
