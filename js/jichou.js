@@ -59,7 +59,7 @@
 				height:jichou.offsetHeight
 			}).then(function(canvas) {
 	//		    document.body.appendChild(canvas);
-				gaohu.setAttribute("src",canvas.toDataURL("image/jpeg",0.2));
+				gaohu.setAttribute("src",canvas.toDataURL("image/jpeg",0.3));
 			});
 
 		}
