@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+		
+		<title></title>
+		
+		<style type="text/css">
+			/*鼠标点击特效*/
+			.text-popup {
+			    animation: textPopup 1s;
+			    color: red;
+			    user-select: none;
+			    white-space: nowrap;
+			    position: absolute;
+			    z-index: 99;
+			}
+			@keyframes textPopup {
+			    0%, 100% {
+			        opacity: 0;
+			    }
+			    5% {
+			        opacity: 1;
+			    }
+			    100% {
+			        transform: translateY(-50px);    
+			    }
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		
+	</body>
+	
+	<script type="text/javascript">
+		
+		/* 鼠标点击特效 - 7Core.CN */ 
+		var a_idx = 0;
+		jQuery(document).ready(function($) {
+			$("body").click(function(e) {
+				var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+				var $i = $("<span/>").text(a[a_idx]); 
+				a_idx = (a_idx + 1) % a.length;
+				var x = e.pageX,y = e.pageY;
+				$i.css({"z-index": 100000000,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#ff6651"});
+				$("body").append($i);
+				$i.animate({
+					"top": y - 180,"opacity": 0
+				},1500,
+				function() {
+					$i.remove();
+				});
+			});
+		});
+		!function (e, t, a) {
+			function r() {
+				for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+				requestAnimationFrame(r)
+			}
+			function n() {
+				var t = "function" == typeof e.onclick && e.onclick;
+				e.onclick = function (e) {
+					t && t(), o(e)
+				}
+			}
+			function o(e) {
+				var a = t.createElement("div");
+				a.className = "heart", s.push({el: a,x: e.clientX - 5,y: e.clientY - 5,scale: 1,alpha: 1,color: c()}), t.body.appendChild(a)}
+			function i(e) {
+				var a = t.createElement("style");
+				a.type = "text/css";
+				try {a.appendChild(t.createTextNode(e))} 
+				catch (t) {a.styleSheet.cssText = e}t.getElementsByTagName("head")[0].appendChild(a)
+			}
+			function c() {
+				return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+			}
+			var s = [];
+			e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+					setTimeout(e, 1e3 / 60)
+				},
+			i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), 
+			n(), r()
+		}(window, document);
+		
+//		另一个鼠标点击特效
+		var fnTextPopup = function (arr, options) {
+    // arr参数是必须的
+		    if (!arr || !arr.length) {
+		        return;    
+		    }
+		    // 主逻辑
+		    var index = 0;
+		    document.documentElement.addEventListener('click', function (event) {
+		        var x = event.pageX, y = event.pageY;
+		        var eleText = document.createElement('span');
+		        eleText.className = 'text-popup';
+		        this.appendChild(eleText);
+		        if (arr[index]) {
+		            eleText.innerHTML = arr[index];
+		        } else {
+		            index = 0;
+		            eleText.innerHTML = arr[0];
+		        }
+		    // 动画结束后删除自己
+		        eleText.addEventListener('animationend', function () {
+		            eleText.parentNode.removeChild(eleText);
+		        });
+		    // 位置
+		        eleText.style.left = (x - eleText.clientWidth / 2) + 'px';
+		        eleText.style.top = (y - eleText.clientHeight) + 'px';
+		    // index递增
+		        index++;
+		    });    
+		};
+		fnTextPopup(['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善']);
+			
+			
+//		通过a标签解析字符串
+	// This function creates a new anchor element and uses location
+	// properties (inherent) to get the desired URL data. Some String
+	// operations are used (to normalize results across browsers).
+	
+		function parseURL(url) {
+		    var a =  document.createElement('a');
+		    a.href = url;
+		    return {
+		        source: url,
+		        protocol: a.protocol.replace(':',''),
+		        host: a.hostname,
+		        port: a.port,
+		        query: a.search,
+		        params: (function(){
+		            var ret = {},
+		                seg = a.search.replace(/^\?/,'').split('&'),
+		                len = seg.length, i = 0, s;
+		            for (;i<len;i++) {
+		                if (!seg[i]) { continue; }
+		                s = seg[i].split('=');
+		                ret[s[0]] = s[1];
+		            }
+		            return ret;
+		        })(),
+		        file: (a.pathname.match(/([^/?#]+)$/i) || [,''])[1],
+		        hash: a.hash.replace('#',''),
+		        path: a.pathname.replace(/^([^/])/,'/$1'),
+		        relative: (a.href.match(/tps?:\/[^/]+(.+)/) || [,''])[1],
+		        segments: a.pathname.replace(/^\//,'').split('/')
+		    };
+		}
+		
+//		Usage 使用方法：
+		var myURL = parseURL('http://abc.com:8080/dir/index.html?id=255&amp;m=hello#top');
+		
+		myURL.file;     // = 'index.html'
+		myURL.hash;     // = 'top'
+		myURL.host;     // = 'abc.com'
+		myURL.query;    // = '?id=255&amp;m=hello'
+		myURL.params;   // = Object = { id: 255, m: hello }
+		myURL.path;     // = '/dir/index.html'
+		myURL.segments; // = Array = ['dir', 'index.html']
+		myURL.port;     // = '8080'
+		myURL.protocol; // = 'http'
+		myURL.source;   // = 'http://abc.com:8080/dir/index.html?id=255
+		console.log(myURL.file);
+		console.log(myURL.hash);
+		console.log(myURL.host);
+		console.log(myURL.query);
+		console.log(myURL.params);
+		console.log(myURL.path);
+		console.log(myURL.segments);
+		console.log(myURL.port);
+		console.log(myURL.protocol);
+		console.log(myURL.source);
+		
+	</script>
+	
+</html>

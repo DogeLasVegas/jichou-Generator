@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3 background-clip背景裁剪</title>
+		<style type="text/css">
+			.info {
+			    padding: 10px 0;
+			    font-weight: bold;
+			    font-style: italic;
+			}
+			p{
+				margin: 30px auto;
+			}
+			#demo1{
+				width:950px;
+				margin:30px auto;
+				background:url(img/mask_text_bg.png) repeat;
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+				-webkit-animation:cliptext1 25s linear infinite;
+				font-size:165px;
+				font-weight:bold;
+				text-transform:uppercase;
+			}
+			@-webkit-keyframes cliptext1{
+				0%{background-position:left top;}
+				50%{background-position:right top;}
+				100%{background-position:left top;}
+			}
+			
+			#demo2{
+				width:800px;
+				margin:30px auto;
+				background:url(img/shuijiao.jpg) repeat;
+				background-size:auto;
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+				-webkit-animation:cliptext2 20s linear infinite;
+				font-size:196px;
+				font-weight:bold;
+				text-transform:uppercase;
+			}
+			@-webkit-keyframes cliptext2{
+				0%{background-position:left top;}
+				50%{background-position:right top;}
+				100%{background-position:left top;}
+			}
+			
+			
+			#demo3{
+				width:750px;
+				margin:30px auto;
+				background:#333 -webkit-linear-gradient(-15deg,#000 5%,rgba(255,255,255,.7),rgba(255,255,255,.9),rgba(255,255,255,.7),#000 10%) no-repeat;
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+				-webkit-animation:cliptext3 10s linear infinite;
+				font-size:56px;
+				font-weight:bold;
+				text-transform:uppercase;
+			}
+			@-webkit-keyframes cliptext3{
+				0%{background-position:left 0;}
+				100%{background-position:1200px 0;}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="info">See The Demo With Webkit Browser</p>
+		<div id="demo1">
+			<p>Clip Text</p>
+		</div>
+		<div id="demo2">
+			<p>遮罩效果</p>
+		</div>
+		<div id="demo3">
+			<p>有点粗糙的光影划过文字效果</p>
+		</div>
+	</body>
+</html>
