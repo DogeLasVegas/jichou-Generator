@@ -2,7 +2,7 @@
 
 ### 记仇生成器
 
-传送门：[记仇生成器](https://greedymonkey.github.io/greedymonkey/rua/jichou.html)
+传送门：[记仇生成器](https://greedymonkey.github.io/index/emmmm/rua/jichou.html)
 
 使用方法：
 上面三个单选按钮可以选择不同的记仇表情包，
